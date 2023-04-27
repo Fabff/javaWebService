@@ -1,0 +1,8 @@
+package com.directmedia.onlinestore.backoffice.resources;
+
+public class CatalogueResource {
+
+	public Set liste() {
+		
+	}
+}

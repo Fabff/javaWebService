@@ -1,0 +1,17 @@
+package com.directmedia.onlinestore.services.resources;
+
+import java.util.Set;
+
+import javax.ws.rs.Path;
+
+import com.directmedia.onlinestore.core.entity.Work;
+
+@Path("/work")
+public class WorkResource {
+
+	
+	public Set<Work> listeFilm()
+	{
+		
+	}
+}

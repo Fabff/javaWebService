@@ -1,0 +1,13 @@
+
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>backoffice</display-name>
+	<servlet>
+		<display-name>javax.ws.rs.core.Application</display-name>
+		<servlet-name>AddToCartServlet</servlet-name>
+		<servlet-class>com.directmedia.onlinestore.frontoffice.presentation.controller.AddToCartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddToCartServlet</servlet-name>
+		<url-pattern>/AddToCartServlet</url-pattern>
+	</servlet-mapping>
+</web-app>

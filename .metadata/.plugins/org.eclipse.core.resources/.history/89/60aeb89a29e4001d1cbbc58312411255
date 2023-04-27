@@ -1,0 +1,10 @@
+package com.directmedia.onlinestore.backoffice.resources;
+
+import java.util.Set;
+
+public class CatalogueResource {
+
+	public Set liste() {
+		
+	}
+}

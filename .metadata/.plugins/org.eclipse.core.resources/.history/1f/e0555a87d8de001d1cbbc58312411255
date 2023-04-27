@@ -1,0 +1,76 @@
+package com.directmedia.onlinestore.frontoffice.presentation.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Optional;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.directmedia.onlinestore.core.entity.Catalogue;
+import com.directmedia.onlinestore.core.entity.Work;
+
+/**
+ * Servlet implementation class WorkDetailsServlet
+ */
+@WebServlet(urlPatterns = {"/work-details"})
+public class WorkDetailsServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public WorkDetailsServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		PrintWriter out = response.getWriter();
+		
+		String idWorkSt = request.getParameter("id");
+		Long idWork = Long.parseLong(idWorkSt);
+		
+		
+		out.println("<html><body>");
+		out.println("<h1>Détail de l'oeuvre : </h1>");
+		Optional<Work> optWork = Catalogue.getListOfWorks().stream().filter(w -> w.getId() == idWork).findAny();
+		if (optWork.isPresent())
+		{
+			Work work = optWork.get();
+			out.println("<h2>"+work.getTitle()+"("+work.getRelease()+")</h2>");
+			out.println("<ul>");
+			out.println("<li> genre : "+work.getGenre()+"</li>");
+			out.println("<li> résumé : "+work.getSummary()+"</li>");
+			out.println("<li> artiste : "+work.getMainArtist().getName()+"</li>");
+			out.println("</ul>");
+			
+			
+			out.println("<form action\"addToCart\" method=\"get\">");
+			out.println("<input type=\"hidden\" name=\"identifiant\" value=\""+idWorkSt+"\"/>");
+			out.println("<input type=\"submit\" value=\"Ajouter au caddie\"/>");
+			out.println("</form>");
+
+		}
+		out.println("</html></body>");
+
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//doGet(request, response);
+	}
+
+}

@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+		<h1>OnlineStore - Gestion de la boutique </h1>
+		<%String login = (String) request.getSession().getAttribute("login"); %> 
+		
+		<%if (login==null)  %>
+			<p>Bonjour </p>
+		<% else %>
+			<p>Bonjour "<%login%>"<a href=\"log-out\">(Déconnexion)</a></p>
+
+		out.println("<a href=\"catalogue\">Accès au catalogue des oeuvres</a><br/>");
+		out.println("<a href=\"add-work-form.jsp\">Ajouter une oeuvre au catalogue</a>");
+		out.print("</body></html>");
+</body>
+</html>

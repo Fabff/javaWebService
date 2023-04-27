@@ -1,0 +1,5 @@
+package com.directmedia.onlinestore.services.resources;
+
+public class WorkResource {
+
+}

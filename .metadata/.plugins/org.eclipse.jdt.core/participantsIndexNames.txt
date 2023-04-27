@@ -1,0 +1,15 @@
+INDEX VERSION 1.131
+/Users/fabricefournier/Documents/projetUdemyJ2EE_final/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2511602877.index
+/backoffice-frontend/src/main/java
+/Users/fabricefournier/Documents/projetUdemyJ2EE_final/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2363590958.index
+/frontoffice/src/main/java
+/Users/fabricefournier/Documents/projetUdemyJ2EE_final/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1018496065.index
+/frontoffice-frontend/src/main/java
+/Users/fabricefournier/Documents/projetUdemyJ2EE_final/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1030917541.index
+/backoffice/src/main/java
+/Users/fabricefournier/Documents/projetUdemyJ2EE_final/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/381754873.index
+/backoffice/src/main/java
+/Users/fabricefournier/Documents/projetUdemyJ2EE_final/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/613966754.index
+/backoffice-frontend/src/main/java
+/Users/fabricefournier/Documents/projetUdemyJ2EE_final/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1029218047.index
+/frontoffice-frontend/src/main/java

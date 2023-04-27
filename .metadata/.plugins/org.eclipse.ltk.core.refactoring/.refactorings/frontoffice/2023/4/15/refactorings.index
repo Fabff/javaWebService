@@ -1,0 +1,23 @@
+1681564812296	Delete element
+1681565086134	Move 'Controller' to 'main'
+1681565268633	Delete element
+1681573690004	Rename package 'frontoffice.Controller'
+1681574377998	Move package
+1681574407385	Copy file
+1681574764781	Move 'web.xml' to 'test'
+1681574768564	Move 'web.xml' to 'WEB-INF'
+1681574787262	Copy file
+1681577161384	Delete element
+1681580691203	Rename package 'com.mycontroller'
+1681580713723	Rename type 'Controller'
+1681580830644	Delete element
+1681584868951	Rename resource 'boucle.tld'
+1681587829111	Copy file
+1681587941974	Rename package 'com.directmedia.onlinestore.frontoffice.controller'
+1681587972689	Move file
+1681587990087	Move 'web.xml' to 'WEB-INF'
+1681587995540	Copy compilation unit
+1681588002227	Delete element
+1681588134188	Copy compilation unit
+1681588184445	Copy compilation unit
+1681657809179	Move 'descriptionFilm.java' to 'tag'

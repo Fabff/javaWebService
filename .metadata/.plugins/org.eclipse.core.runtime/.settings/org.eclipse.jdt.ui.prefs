@@ -1,0 +1,10 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.util.Collection"><rhs name\="java.util.HashSet"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.HashSet"/></lhs><lhs name\="java.util.Set"><rhs name\="java.util.HashSet"/></lhs><lhs name\="com.directmedia.onlinestore.core.entity.Work"><rhs name\="com.directmedia.onlinestore.core.entity.Work"/></lhs><lhs name\="com.directmedia.onlinestore.core.entity.Artist"><rhs name\="com.directmedia.onlinestore.core.entity.Artist"/></lhs><lhs name\="java.lang.Number"><rhs name\="java.lang.Long"/></lhs><lhs name\="com.directmedia.onlinestore.core.entity.ShoppingCart"><rhs name\="com.directmedia.onlinestore.core.entity.ShoppingCart"/></lhs><lhs name\="com.fasterxml.jackson.core.Versioned"><rhs name\="com.fasterxml.jackson.databind.ObjectMapper"/></lhs><lhs name\="com.fasterxml.jackson.core.ObjectCodec"><rhs name\="com.fasterxml.jackson.databind.ObjectMapper"/></lhs><lhs name\="com.fasterxml.jackson.databind.ObjectMapper"><rhs name\="com.fasterxml.jackson.databind.ObjectMapper"/></lhs><lhs name\="javax.ws.rs.core.Response$StatusType"><rhs name\="javax.ws.rs.core.Response$Status"/></lhs></history>
+content_assist_number_of_computers=17
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

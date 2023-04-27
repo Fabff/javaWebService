@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+/Users/fabricefournier/Documents/projetUdemyJ2EE_final/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2907793372.index
+3231861085.index
+4071620273.index
+1623423388.index
+1217860539.index

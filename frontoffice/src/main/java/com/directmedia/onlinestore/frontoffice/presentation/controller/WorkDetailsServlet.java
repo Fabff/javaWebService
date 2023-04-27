@@ -1,0 +1,59 @@
+package com.directmedia.onlinestore.frontoffice.presentation.controller;
+
+import java.io.IOException;
+import java.util.Optional;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.directmedia.onlinestore.core.entity.Catalogue;
+import com.directmedia.onlinestore.core.entity.Work;
+
+/**
+ * Servlet implementation class WorkDetailsServlet
+ */
+@WebServlet(urlPatterns = {"/work-details"})
+public class WorkDetailsServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public WorkDetailsServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		String idWorkSt = request.getParameter("id");
+		Long idWork = Long.parseLong(idWorkSt);
+		
+		Optional<Work> optWork = Catalogue.getListOfWorks().stream().filter(w -> w.getId() == idWork).findAny();
+		if (optWork.isPresent())
+		{
+			Work work = optWork.get();
+			request.setAttribute("work", work);
+		}
+		RequestDispatcher disp = request.getRequestDispatcher("/WEB-INF/work-details.jsp");
+		disp.forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//doGet(request, response);
+	}
+
+}

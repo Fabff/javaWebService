@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" isELIgnored="false"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="js/jquery-3.6.4.min"></script>
+<script type="text/javascript" src="js/application.js"></script>
+
+<title>Insert title here</title>
+</head>
+<body>
+		<h1>OnlineStore - Gestion de la boutique </h1>
+		
+		<a href="work">Afficher le catalogue des oeuvres</a><br/>
+		<a href="add-work-form.jsp">Ajouter une oeuvre au catalogue</a>
+</body>
+</html>

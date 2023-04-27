@@ -1,0 +1,5 @@
+package com.directmedia.onlinestore.backoffice.resources;
+
+public class CatalogueResource {
+
+}

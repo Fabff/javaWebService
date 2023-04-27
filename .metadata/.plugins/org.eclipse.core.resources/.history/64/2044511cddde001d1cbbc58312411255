@@ -1,0 +1,71 @@
+package com.directmedia.onlinestore.frontoffice.presentation.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Optional;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.directmedia.onlinestore.core.entity.Catalogue;
+import com.directmedia.onlinestore.core.entity.ShoppingCart;
+import com.directmedia.onlinestore.core.entity.Work;
+
+/**
+ * Servlet implementation class AddToCartServlet
+ */
+@WebServlet(urlPatterns = {"/addToCart"})
+public class AddToCartServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public AddToCartServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//doGet(request, response);
+		String idWorkSt = (String) request.getAttribute("identifiant");
+		Long idworkL = Long.parseLong(request.getAttribute("identifiant"));
+		
+		ShoppingCart cart = (ShoppingCart)request.getSession().getAttribute("cart");
+		
+		if (cart == null)
+		{
+			cart = new ShoppingCart();
+			request.getSession().setAttribute("cart", cart);
+		}
+		
+		Optional<Work> optWork = Catalogue.getListOfWorks().stream().filter(w -> w.getId()==idworkL).findAny();
+		
+		if (optWork.isPresent())
+		{
+			Work work = optWork.get();
+			cart.getItems().add(work);
+		}
+		
+		PrintWriter out = response.getWriter();
+		out.println("<html><body><p>Ouvre ajouté au caddie("+cart.getItems().size()+")</p><br><a href=\"catalogue\">"
+				+ "Retour au catalogue</a></body></html>");
+	}
+
+}

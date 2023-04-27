@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Détail de l'oeuvre : </h1>
+
+<h2>work.getTitle()+"("+work.getRelease()+")</h2>
+
+<ul>
+	<li> genre : "+work.getGenre()</li>
+	<li> résumé : "+work.getSummary()</li>
+	<li> artiste : "+work.getMainArtist().getName()</li>
+</ul>
+			
+			
+<form action="addToCart" method="POST">
+<input type="hidden" name="identifiant" value="+work.getId()+"/>
+<input type="submit" value="Ajouter au caddie"/>
+</form>
+
+</body>
+</html>
